@@ -1,18 +1,18 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-dark-blue flex items-center pt-16">
+    <section className="min-h-screen bg-hero flex items-center pt-16 transition-colors">
       <div className="max-w-6xl mx-auto px-6 py-24 w-full">
         <div className="max-w-3xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-royal-blue/40 bg-royal-blue/10 text-royal-light text-sm font-medium mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-royal-light animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand/40 bg-brand/10 text-brand-light text-sm font-medium mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-light animate-pulse" />
             AI 기반 창업 로드맵 코칭 플랫폼
           </div>
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
             아이디어에서<br />
-            <span className="text-royal-light">사업계획서</span>까지,<br />
+            <span className="text-brand-light">사업계획서</span>까지,<br />
             AI가 함께합니다
           </h1>
 
@@ -24,12 +24,16 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
-            <a href="#contact"
-              className="px-8 py-4 rounded-xl bg-royal-blue text-white font-bold text-base hover:bg-royal-light transition-colors shadow-lg shadow-royal-blue/30">
+            <a
+              href="#contact"
+              className="px-8 py-4 rounded-xl bg-brand text-white font-bold text-base hover:bg-brand-light transition-colors shadow-lg shadow-brand/30"
+            >
               무료 상담 신청
             </a>
-            <a href="#services"
-              className="px-8 py-4 rounded-xl border border-white/20 text-white font-semibold text-base hover:border-white/40 hover:bg-white/5 transition-colors">
+            <a
+              href="#services"
+              className="px-8 py-4 rounded-xl border border-white/20 text-white font-semibold text-base hover:border-white/40 hover:bg-white/5 transition-colors"
+            >
               서비스 알아보기 →
             </a>
           </div>

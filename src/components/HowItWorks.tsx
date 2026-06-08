@@ -10,40 +10,44 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="py-24 bg-dark-blue">
+    <section id="how" className="py-24 bg-slate-100 dark:bg-slate-900 transition-colors">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-royal-light font-bold text-sm uppercase tracking-widest mb-3">How It Works</p>
-          <h2 className="text-4xl font-bold text-white mb-4">7단계 창업 로드맵</h2>
-          <p className="text-white/50 text-lg max-w-xl mx-auto">
+          <p className="text-brand font-bold text-sm uppercase tracking-widest mb-3">How It Works</p>
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">7단계 창업 로드맵</h2>
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-xl mx-auto">
             각 단계마다 AI가 초안을 생성하고, 사용자가 다듬어 완성도를 높입니다.
           </p>
         </div>
 
-        {/* Steps */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {STEPS.map((s, i) => (
-            <div key={s.step}
-              className={`relative p-6 rounded-2xl border transition-all ${
+            <div
+              key={s.step}
+              className={`relative p-6 rounded-2xl border-2 transition-all ${
                 i === 6
-                  ? 'border-royal-blue bg-royal-blue/15 md:col-span-2 lg:col-span-1'
-                  : 'border-white/10 bg-white/5 hover:bg-white/8 hover:border-white/20'
-              }`}>
+                  ? 'border-brand bg-brand/8 dark:bg-brand/15 md:col-span-2 lg:col-span-1'
+                  : 'border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-slate-300 dark:hover:border-white/20 hover:shadow-sm'
+              }`}
+            >
               <div className="flex items-center gap-3 mb-3">
-                <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 ${
-                  i === 6 ? 'bg-royal-blue text-white' : 'bg-royal-blue/20 text-royal-light'
-                }`}>
+                <span
+                  className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 ${
+                    i === 6
+                      ? 'bg-brand text-white'
+                      : 'bg-brand/10 dark:bg-brand/20 text-brand dark:text-brand-light'
+                  }`}
+                >
                   {s.step}
                 </span>
                 {i === 6 && (
-                  <span className="text-xs font-semibold text-royal-light bg-royal-blue/30 px-2 py-0.5 rounded-full">
+                  <span className="text-xs font-semibold text-brand dark:text-brand-light bg-brand/15 dark:bg-brand/30 px-2 py-0.5 rounded-full">
                     최종 완성
                   </span>
                 )}
               </div>
-              <h3 className="font-bold text-white mb-2">{s.title}</h3>
-              <p className="text-sm text-white/50 leading-relaxed">{s.desc}</p>
+              <h3 className="font-bold text-slate-900 dark:text-white mb-2">{s.title}</h3>
+              <p className="text-sm text-slate-500 dark:text-white/50 leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>

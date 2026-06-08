@@ -1,12 +1,14 @@
 export default function Footer() {
   return (
-    <footer className="bg-navy py-12">
+    <footer className="bg-navy dark:bg-navy-900 py-12 transition-colors">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 rounded-lg bg-royal-blue flex items-center justify-center text-white font-bold text-sm">R</div>
+              <div className="w-7 h-7 rounded-lg bg-brand flex items-center justify-center text-white font-bold text-sm">
+                R
+              </div>
               <span className="text-white font-bold">RoadmapAI</span>
             </div>
             <p className="text-white/40 text-sm leading-relaxed">
@@ -20,7 +22,9 @@ export default function Footer() {
             <p className="text-white/60 text-xs font-bold uppercase tracking-wider mb-3">서비스</p>
             <div className="space-y-2">
               {['AI 창업 로드맵', '지원사업 매칭', '사업계획서 자동화', '무료 상담'].map(l => (
-                <a key={l} href="#" className="block text-sm text-white/40 hover:text-white/70 transition-colors">{l}</a>
+                <a key={l} href="#" className="block text-sm text-white/40 hover:text-white/70 transition-colors">
+                  {l}
+                </a>
               ))}
             </div>
           </div>
@@ -30,7 +34,9 @@ export default function Footer() {
             <p className="text-white/60 text-xs font-bold uppercase tracking-wider mb-3">회사</p>
             <div className="space-y-2">
               {['회사 소개', '문의하기'].map(l => (
-                <a key={l} href="#" className="block text-sm text-white/40 hover:text-white/70 transition-colors">{l}</a>
+                <a key={l} href="#" className="block text-sm text-white/40 hover:text-white/70 transition-colors">
+                  {l}
+                </a>
               ))}
             </div>
           </div>
