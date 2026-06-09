@@ -33,7 +33,10 @@ function DarkToggle() {
       title={dark ? '라이트 모드' : '다크 모드'}
       className="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-white/70 hover:bg-slate-200 dark:hover:bg-white/20 transition-colors"
     >
-      {dark ? '☀' : '☾'}
+      {dark
+        ? <i className="fa-regular fa-sun text-base" />
+        : <i className="fa-regular fa-moon text-base" />
+      }
     </button>
   )
 }
@@ -91,7 +94,10 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           className="md:hidden text-slate-700 dark:text-white p-2 text-lg"
         >
-          {open ? '✕' : '☰'}
+          {open
+            ? <i className="fa-solid fa-xmark" />
+            : <i className="fa-solid fa-bars" />
+          }
         </button>
       </div>
 

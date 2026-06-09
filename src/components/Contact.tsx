@@ -30,27 +30,27 @@ export default function Contact() {
             <div className="space-y-5">
               {[
                 {
-                  icon: '🎯',
+                  iconClass: 'fa-regular fa-map',
                   title: '맞춤 로드맵 설계',
                   desc: '아이템과 단계에 맞는 최적 경로 제안',
                   iconCls: 'bg-brand/10 text-brand',
                 },
                 {
-                  icon: '📋',
+                  iconClass: 'fa-solid fa-chart-line',
                   title: '지원사업 매칭 리포트',
                   desc: '신청 가능한 지원사업 무료 분석',
                   iconCls: 'bg-dark-green/10 text-green-700 dark:text-green-400',
                 },
                 {
-                  icon: '⚡',
+                  iconClass: 'fa-regular fa-paper-plane',
                   title: '빠른 응답',
                   desc: '평일 기준 24시간 내 회신',
                   iconCls: 'bg-dark-red/10 text-red-700 dark:text-red-400',
                 },
               ].map(item => (
                 <div key={item.title} className="flex items-start gap-4">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0 ${item.iconCls}`}>
-                    {item.icon}
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${item.iconCls}`}>
+                    <i className={`${item.iconClass} text-base`} />
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900 dark:text-white">{item.title}</p>
@@ -65,8 +65,8 @@ export default function Contact() {
           <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-sm transition-colors">
             {sent ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-8">
-                <div className="w-16 h-16 rounded-full bg-dark-green/10 flex items-center justify-center text-3xl mb-4">
-                  ✓
+                <div className="w-16 h-16 rounded-full bg-dark-green/10 flex items-center justify-center mb-4">
+                  <i className="fa-regular fa-circle-check text-3xl text-green-600 dark:text-green-400" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">상담 신청 완료!</h3>
                 <p className="text-slate-500 dark:text-slate-400">평일 24시간 내 연락드리겠습니다.</p>
